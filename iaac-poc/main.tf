@@ -1,7 +1,8 @@
 # main.tf
 
-module "dev_s3_bucket" {
-  source       = "./../modules/s3"
-  environment  = "poc"
-  bucket_name   = "cloud-sre-s3-bucket-demo"
+module "s3_bucket_dev" {
+  source        = "./../modules/s3"
+  environment   = "poc"
+  region        = "us-east-1"
+  bucket_name   = "cloud-sre-poc-bucket-demo"
 }
