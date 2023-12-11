@@ -8,6 +8,13 @@ resource "aws_s3_bucket" "s3_bucket" {
 
   tags = {
     Environment = var.environment
+    AppName = var.appName
+    InfraOwner = var.infraOwner
+    BusinessUnit = var.businessUnit
+    Backup = var.backup
+    Name = var.name
+    DataClassification = var.dataClassification
+    Product = var.product
   }
 
 }
