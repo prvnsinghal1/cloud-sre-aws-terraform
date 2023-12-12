@@ -33,6 +33,7 @@ resource "aws_s3_bucket_public_access_block" "s3_bucket_public_access_block" {
   block_public_policy     = false
   ignore_public_acls      = false
   restrict_public_buckets = false
+  
 }
 
 resource "aws_s3_bucket_policy" "s3_bucket_policy" {
@@ -54,4 +55,5 @@ resource "aws_s3_bucket_policy" "s3_bucket_policy" {
       },
     ],
   })
+  depends_on = [aws_s3_bucket_public_access_block.s3_bucket_public_access_block]
 }
